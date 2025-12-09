@@ -494,6 +494,30 @@
             font-weight: 700;
             margin-bottom: 1rem;
         }
+        /* Footer Contact Link Hover Effects */
+        .footer a[href^="mailto"],
+        .footer a[href^="https://linkedin"],
+        .footer a[href*="ibispublicsector"] {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer a[href^="mailto"]:hover,
+        .footer a[href^="https://linkedin"]:hover,
+        .footer a[href*="ibispublicsector"]:hover {
+            background: #C41E3A;
+            border-color: #C41E3A;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(196, 30, 58, 0.4);
+        }
         
         /* Responsive */
         @media (max-width: 1024px) {
@@ -544,6 +568,15 @@
                 text-align: center;
             }
         }
+
+        @media (max-width: 768px) {
+            .project-badge {
+                white-space: normal;  /* Allow wrapping */
+                text-align: center;   /* Keep text centered when it wraps */
+                line-height: 1.3;     /* Tighten line spacing for wrapped text */
+            }
+        }    
+        
         
         /* Animations */
         @keyframes fadeInUp {
@@ -575,7 +608,7 @@
                     <div class="title"> Account Lead </div>
                     <div class="company">Ibis Public Sector | Fort Worth, TX</div>
                     <p class="profile-tagline">
-                      Most organizations are drowning in feedback—surveys, town halls, exit interviews, constituent emails—but struggling to turn it into strategic intelligence that actually drives decisions. I design Qualtrics systems that solve this problem: connecting what stakeholders say to what leadership can do about it, whether that's reducing turnover in VA organizations, forecasting enrollment with 95% accuracy, or turning strategic plans into accountability systems that outlast leadership transitions.
+                      Most organizations are drowning in feedback - surveys, town halls, exit interviews, constituent emails - but struggling to turn it into strategic intelligence that actually drives decisions. I help leaders turn listening into action: designing Qualtrics systems that connect what stakeholders say to what leadership can do about it, whether that's reducing turnover in organizations, etablishing 360 multi-rates evvaluations, or turning strategic plans into accountability systems that outlast leadership transitions.
                     </p>
                 </div>
             </div>
@@ -593,86 +626,72 @@
     <!-- Main Content -->
     <div class="main-content">
         <!-- About Section -->
-        <section class="section" id="about">
-            <div class="section-header">
-                <h2>About Me</h2>
-            </div>
-            
-            <div class="about-grid">
-                <div class="about-content">
-                    <h3>Strategic Leader & Data Innovator</h3>
-                    <p>
-                        I'm a strategic leader with more than a decade of experience developing and managing programs that drive outcomes in large-scale public sector organizations. With a background as a U.S. Air Force Civil Engineer and as Director of Planning, Evaluation, & Research for a school district in North Texas, I bring a unique perspective grounded in both operational leadership and advanced analytics.
-                    </p>
-                    <p>
-                        At Ibis Public Sector, I serve as Account Lead, partnering with government agencies and school districts to tackle their most pressing operational and strategic challenges. I specialize in translating complex data and technical capabilities into strategic solutions that align with organizational missions and stakeholder needs.
-                    </p>
-                    <p>
-                        My approach combines deep analytical expertise with proven capabilities in team leadership, organizational capacity building through training and partnerships, and implementing performance measurement systems that drive sustained improvements in organizational outcomes.
-                    </p>
+            <section class="section" id="about">
+                <div class="section-header">
+                    <h2>About Me</h2>
                 </div>
                 
-                <div class="sidebar">
-                    <div class="sidebar-card">
-                        <h3>Connect</h3>
-                        <div class="contact-links">
-                            <a href="mailto:roy.zamora@ibispublicsector.com" class="contact-link">
-                                📧 Email Me
-                            </a>
-                            <a href="https://linkedin.com/in/roy-zamora2" class="contact-link" target="_blank">
-                                💼 LinkedIn
-                            </a>
-                            <a href="https://ibispublicsector.com" class="contact-link" target="_blank">
-                                🏢 Ibis Public Sector
-                            </a>
-                        </div>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <h3>Strategic Leader & Data Innovator</h3>
+                        <p>
+                            I'm a strategic leader with more than a decade of experience developing and managing programs that drive outcomes in large-scale public sector organizations. With a background as a U.S. Air Force Civil Engineer and as Director of Planning, Evaluation, & Research for a school district in North Texas, I bring a unique perspective grounded in both operational leadership and advanced analytics.
+                        </p>
+                        <p>
+                            At Ibis Public Sector, I serve as Account Lead, partnering with government agencies and school districts to tackle their most pressing operational and strategic challenges. I specialize in translating complex data and technical capabilities into strategic solutions that align with organizational missions and stakeholder needs.
+                        </p>
+                        <p>
+                            My approach combines deep analytical expertise with proven capabilities in team leadership, organizational capacity building through training and partnerships, and implementing performance measurement systems that drive sustained improvements in organizational outcomes.
+                        </p>
                     </div>
                     
-                    <div class="sidebar-card">
-                        <h3>My Approach</h3>
-                        <ul class="approach-list">
-                            <li>Combines military precision and public sector experience with analytical rigor</li>
-                            <li>Listens deeply, maps systems, and identifies leverage points for change</li>
-                            <li>Designs executable strategies balancing technical possibilities and organizational realities</li>
-                            <li>Cultivates partnerships spanning technical staff, leadership, and community stakeholders</li>
-                            <li>Committed to sustainable solutions that create lasting organizational impact</li>
+                    <div class="sidebar">
+                        <div class="sidebar-card">
+                            <h3>My Approach</h3>
+                            <ul class="approach-list">
+                                <li>Combines military precision and public sector experience with analytical rigor</li>
+                                <li>Listens deeply, maps systems, and identifies leverage points for change</li>
+                                <li>Designs executable strategies balancing technical possibilities and organizational realities</li>
+                                <li>Cultivates partnerships spanning technical staff, leadership, and community stakeholders</li>
+                                <li>Committed to sustainable solutions that create lasting organizational impact</li>
+                                <li>We don't just deliver recommendations—we partner through the entire journey</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="expertise-columns">
+                    <div class="expertise-column">
+                        <h4>Strategic Focus</h4>
+                        <ul>
+                            <li>Guides government agencies and school districts in developing strategic programs</li>
+                            <li>Partners with executive leadership on performance measurement strategies</li>
+                            <li>Leads strategic planning for state and local government agencies</li>
+                            <li>Builds organizational capacity through training and data-driven frameworks</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-column">
+                        <h4>Core Expertise</h4>
+                        <ul>
+                            <li>Advanced statistical modeling, predictive analytics, and performance measurement</li>
+                            <li>Trend forecasting, demographic analysis, and geospatial modeling (97% accuracy)</li>
+                            <li>Expert data preparation, system integration, and translating analyses into insights</li>
+                            <li>Organizational leadership, strategic compensation design, and institutional capacity building</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expertise-column">
+                        <h4>Platform Expertise</h4>
+                        <ul>
+                            <li>Qualtrics CX & EX platform specialist - surveys, dashboards, workflows</li>
+                            <li>Advanced survey design with branching logic and authentication for stakeholder and employee engagement</li>
+                            <li>Custom ticketing systems, operational tracking, and workforce analytics</li>
+                            <li>Data visualization and real-time performance monitoring across customer and employee experiences</li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            
-            <div class="expertise-columns">
-                <div class="expertise-column">
-                    <h4>Strategic Focus</h4>
-                    <ul>
-                        <li>Guides government agencies and school districts in developing strategic programs</li>
-                        <li>Partners with executive leadership on performance measurement strategies</li>
-                        <li>Leads strategic planning for state and local government agencies</li>
-                        <li>Builds organizational capacity through training and data-driven frameworks</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-column">
-                    <h4>Core Expertise</h4>
-                    <ul>
-                        <li>Advanced statistical modeling, predictive analytics, and performance measurement</li>
-                        <li>Trend forecasting, demographic analysis, and geospatial modeling (97% accuracy)</li>
-                        <li>Expert data preparation, system integration, and translating analyses into insights</li>
-                        <li>Organizational leadership, strategic compensation design, and institutional capacity building</li>
-                    </ul>
-                </div>
-                
-                <div class="expertise-column">
-                    <h4>Platform Expertise</h4>
-                    <ul>
-                        <li>Qualtrics CX & EX platform specialist - surveys, dashboards, workflows<li>
-                        Advanced survey design with branching logic and authentication for stakeholder and employee engagement<li>
-                        Custom ticketing systems, operational tracking, and workforce analytics<li>
-                        Data visualization and real-time performance monitoring across customer and employee experiencesQualtrics CX platform specialist - surveys, dashboards, workflows</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
         
         <!-- Team Section -->
         <section class="section" id="team">
@@ -682,7 +701,12 @@
             
             <div class="about-content">
                 <p>
-                    I work alongside a talented Ibis Public Sector team that brings deep expertise across leadership development, research design, data systems architecture, and technical implementation. Our backgrounds span former school principals and district leaders who understand organizational dynamics, researchers with advanced degrees who bring rigorous evaluation frameworks, data analysts who bridge complex systems with practical applications, and Qualtrics-certified technical experts with nearly two decades of platform experience. Together, we combine strategic advisory with hands-on execution—facilitating alignment sessions, designing sophisticated surveys and dashboards, conducting end-to-end research processes, and managing complex projects from kickoff through delivery. This means we don't just deliver recommendations; we partner through the entire journey, ensuring solutions work in the real world of public sector operations.
+            <strong>We're not a vendor. We're your team.</strong> I work alongside a talented team built specifically for public sector work: former school principals and district leaders who understand organizational dynamics, researchers with advanced degrees who bring rigorous evaluation frameworks, data analysts who bridge complex systems with practical applications, and Qualtrics-certified technical experts with nearly two decades of platform experience.
+        </p>
+        
+        <p>
+            What makes us different? We don't deliver recommendations and disappear. We guide, configure, and stay with you through the work - facilitating alignment sessions, designing sophisticated surveys and dashboards, conducting end-to-end research processes, and managing complex projects from kickoff through sustained implementation. This embedded partnership approach means solutions don't just look good on paper; they work in the real world of public sector operations.
+        </p>
                 </p>
                 
                 <div style="margin-top: 2rem;">
@@ -1023,7 +1047,7 @@
     </div>
 
     <!-- Playbook CTA -->
-    <div class="playbooks-intro" style="margin-top: 3rem; border-top-color: #C41E3A;">
+    <div class="playbooks-intro" style="margin-top: 3rem; border-top-color: #2c3e50;">
         <h3 style="color: #1a1a2e; font-size: 1.5rem; margin-bottom: 1rem;">Custom Playbook Development</h3>
         <p style="margin-bottom: 1rem;">
             Need a framework tailored to your organization's unique context? We develop custom playbooks for performance management, competency-based compensation, talent development systems, and organizational transformation initiatives that don't fit off-the-shelf solutions.
@@ -1047,8 +1071,22 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">Roy Zamora | Ibis Public Sector</div>
-            <p> Account Lead / Client Executive</p>
-            <p>Fort Worth, Texas</p>
+            <p>Account Lead </p>
+            <p>Based in Fort Worth, Texas</p>
+            
+            <!-- Contact Links -->
+            <div style="display: flex; gap: 1.5rem; justify-content: center; margin: 2rem 0; flex-wrap: wrap;">
+                <a href="mailto:roy.zamora@ibispublicsector.com" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2);">
+                    📧 Email Me
+                </a>
+                <a href="https://linkedin.com/in/roy-zamora2" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2);">
+                    💼 LinkedIn
+                </a>
+                <a href="https://ibispublicsector.com" target="_blank" style="color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; background: rgba(255, 255, 255, 0.1); border-radius: 8px; transition: all 0.3s ease; border: 1px solid rgba(255, 255, 255, 0.2);">
+                    🏢 Ibis Public Sector
+                </a>
+            </div>
+            
             <p style="margin-top: 2rem; font-size: 0.9rem;">
                 © 2025 Roy Zamora. Part of the Ibis Public Sector team, a wholly-owned subsidiary of Reingold.
             </p>
@@ -1087,6 +1125,8 @@
         document.querySelectorAll('.project-card, .expertise-column, .stat-item').forEach(el => {
             observer.observe(el);
         });
+        
+        
     </script>
 </body>
 </html>
